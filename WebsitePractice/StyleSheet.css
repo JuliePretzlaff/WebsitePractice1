@@ -12,32 +12,27 @@
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 50 500 500;
+    grid-template-rows: 700px 500px;
 }
 
 /*NAV BAR*/
 
 
 
-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
+section.nav {
+    grid-column: 1 / span 5;
     width: 100%;
     background-color: white;
-    /*background-image: url('images/FB_IMG_1519235922864.jpg');*/
-    flex-wrap: wrap;
-    overflow: hidden;
-    /*box-shadow: 0px 5px 6px cornflowerblue;*/
+    position: fixed;
+    top: 0;
+    left:0;
 }
 
 ul {
     display: flex;
     list-style-type: none;
     flex-direction: row;
-    align-content: flex-start;
-    display: flex;
-    margin-left: 75%;
+    justify-content:flex-end;
 }
 
 a {
@@ -58,45 +53,63 @@ a {
 
 /*defining area form main text content*/
 .main-text {
-    grid-column: 1/span 2;
-    grid-row: 1/span 1;
-    margin-top: 30px;
+    grid-column: 1 / span 2;
+   margin-top: 40px;
+   
 }
 
-#name {
+#title {
     font-size: 2rem;
     color: white;
     padding: 0px;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top:5%;
     display: flex;
     flex-wrap: wrap;
+    justify-content:center;
 }
 
 p {
     color: white;
-    font-size: 2rem;
+    font-size: 1rem;
     padding: 0px;
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
     flex-wrap: wrap;
 }
+h1#skills-title {
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+   display:flex
+}
+
+p#skill-list {
+    color: white;
+    font-size: 1rem;
+}
 
 .main-img {
     grid-column: 3/ span 3;
-    grid-row: 1/ span 1;
-    margin-right:0;
+    margin-top: 40px;
 }
-#logo {
-    display: flex;
-    padding: 0px;
-   margin-top:20%;
-   margin-left: 25%;
+
+.main-img {
+   display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+img#logo {
     height: 50%;
-    width: 50%;
-    margin-right: 0;
+    margin-top: 7%;
+    border: solid;
+    border-width:10px;
+    border-color: lightblue;
 }
+
 
 
 
@@ -105,9 +118,9 @@ p {
 /*carousel*/
 .carousel-wrapper {
     grid-column: 1/ span 5;
-    grid-row: 3/span 1;
+    
     margin-top: 60px;
-    height: 500px;
+   
     position: relative;
     width: 800px;
     margin-left: auto;
@@ -156,7 +169,7 @@ p {
     }
 }
 
-}
+
 
 /*Select every element*/
 [id^="item"] {
@@ -197,3 +210,4 @@ p {
     display:flex;
     justify-content:center;
 }
+
