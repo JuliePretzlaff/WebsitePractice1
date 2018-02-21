@@ -11,10 +11,15 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 700px 500px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 700px 75px 50px 75px 50px 500px 75px;
 }
 
+
+.empty-gap {
+    height: 20px;
+    grid-column: 1/ span 14;
+}
 /*NAV BAR*/
 
 
@@ -33,6 +38,7 @@ ul {
     list-style-type: none;
     flex-direction: row;
     justify-content:flex-end;
+    flex-wrap: wrap;
 }
 
 a {
@@ -45,15 +51,15 @@ a {
 }
 
     a:hover {
-        background-color: white;
-        color: cornflowerblue;
+        background-color: lightblue;
+        color: navy;
     }
 
 
 
 /*defining area form main text content*/
 .main-text {
-    grid-column: 1 / span 2;
+    grid-column: 1 / span 3;
    margin-top: 40px;
    
 }
@@ -92,7 +98,7 @@ p#skill-list {
 }
 
 .main-img {
-    grid-column: 3/ span 3;
+    grid-column: 4/ span 3;
     margin-top: 40px;
 }
 
@@ -109,7 +115,18 @@ img#logo {
     border-width:10px;
     border-color: lightblue;
 }
-
+/*divider bar:*/
+.bar {
+    grid-column: 1/span 6;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    color: navy;
+    font-size: 2rem;
+}
 
 
 
@@ -117,10 +134,8 @@ img#logo {
 
 /*carousel*/
 .carousel-wrapper {
-    grid-column: 1/ span 5;
-    
+    grid-column: 2/ span 4;
     margin-top: 60px;
-   
     position: relative;
     width: 800px;
     margin-left: auto;
